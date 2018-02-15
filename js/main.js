@@ -3,13 +3,10 @@ console.log("this JS is working")
 $(document).ready( function() {
 
   // var result = $('#result')
-  // var times_won = $('#won')
-  // var won = 0
-  // var times_lost = $('#lost')
-  // var lost = 0
-  // var times_tied = $('#tied')
-  // var tied = 0
-  // var games = 0
+  var won = 0
+  var lost = 0
+  var tied = 0
+  var games = 0
   // var won_per = $('#per_won')
   // var per_won = 0
   // var lost_per = $('#per_lost')
@@ -35,23 +32,20 @@ $(document).ready( function() {
   $('#clear_btn').click( function() {
     compChoice = ""
     userChoice = ""
-    user.innerHTML = userChoice
-    comp.innerHTML = compChoice
+    user = ""
+    comp = ""
+    tied = null
+    lost = null
+    won = null
     win_loose = ""
-    result.innerHTML = win_loose
-    tied = ""
-    times_tied.innerHTML = tied
-    lost = ""
-    times_lost.innerHTML = lost
-    won = ""
-    times_won.innerHTML = won
-    // games = 0
-    // per_won = ""
-    // won_per.innerHTML = per_won
-    // per_lost = ""
-    // lost_per.innerHTML = per_lost
-    // tied_per = ""
-    // tied_per.innerHTML = per_tied
+    games = null
+    $('#user').text(userChoice)
+    $('#comp').text(compChoice)
+    $('#tied').text(tied)
+    $('#lost').text(lost)    
+    $('#won').text(won)
+    $('#result').text(win_loose)
+    $('#total_games').text(games)
   })
   
   $('.choice').click( function() {
@@ -67,37 +61,36 @@ $(document).ready( function() {
         case (compChoice > 0.67):
           compChoice = "scissors"
       }
-    $('#user').html(userChoice)
-    $('#comp').html(compChoice)
+    $('#user').text(userChoice)
+    $('#comp').text(compChoice)
     assess(userChoice, compChoice)
   })
 
   function assess(userChoice, compChoice) {
     if (userChoice === compChoice) {
       win_loose = "You Tied"
-      // tied += 1
-      // games += 1
-      // times_tied.innerHTML = tied
+      tied += 1
+      games += 1
+      $('#tied').text(tied)
       // per_tied = Math.round((tied/games) * 100) + '%'
       // tied_per.innerHTML = per_tied
     }
     else if (userChoice === "rock" && compChoice === "paper" || userChoice === "paper" && compChoice === "scissors" || userChoice === "scissors" && compChoice === "rock" ) {
       win_loose = "You Loose"
-      // lost += 1
-      // games += 1
-      // times_lost.innerHTML = lost
-      // per_lost = Math.round((lost/games) * 100) + '%'
+      lost += 1
+      games += 1
+      $('#lost').text(lost)      // per_lost = Math.round((lost/games) * 100) + '%'
       // lost_per.innerHTML = per_lost
     }
     else {
       win_loose = "You Win!"
-      // won += 1
-      // games += 1
-      // times_won.innerHTML = won
-      // per_won = Math.round((won/games) * 100) + '%'
+      won += 1
+      games += 1
+      $('#won').text(won)      // per_won = Math.round((won/games) * 100) + '%'
       // won_per.innerHTML = per_won
     }
-    $('#result').html(win_loose)
+    $('#result').text(win_loose)
+    $('#total_games').text(games)
   }
 
   // function clickButton {
