@@ -1,0 +1,85 @@
+/* =====================Clearfix for floats==================*/
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	clear: both;
+	*zoom: 1;
+}
+
+body {
+  color: white;
+  font: 300 20px/24px "sans-serif";
+  background: #222;
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+#scissors {
+  margin-right: 0;
+}
+
+button:hover {
+  background: #777;
+}
+#clear_btn {
+  height: 40px;
+  width: 80px;
+}
+.col-1-2 {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.col-2-2 {
+  width: 50%;
+  height: 100%;
+  float: right;
+  padding-left: 10px;
+}
+.col-1-2,
+.col-2-2 {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.align_r {
+  text-align: right;
+}
+
+.align_l {
+  text-align: left;
+}
+
+.your_choice {
+  color: yellow;
+}
+.comp_choice  {
+  color: blue;
+}
+.win_times {
+  color: green;
+}
+.lost_times{
+  color: red;
+}

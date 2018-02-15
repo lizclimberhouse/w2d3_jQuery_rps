@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Rock - Paper - Scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <h1>Welcome to Rock - Paper - Scissors</h1>
+    <div class="clearfix">
+      <button><img class="choice" id="rock" src="images/rock.jpg" alt="Picture of a rock"></button>
+      <button><img class="choice" id="paper" src="images/paper.jpg" alt="Picture of paper"></button>
+      <button><img class="choice" id="scissors" src="images/scissors.jpg" alt="Picture of scissors"></button>
+      <h1>*---<label id='result'></label>---*</h1>
+    </div>
+
+      <div class="col-1-2">
+        <h3 class="align_r your_choice">Your choice: </h3> 
+        <h3 class="align_r comp_choice">Computer choice: </h3>   
+        <h5 class="align_r win_times">Times you won: </h5>
+        <h5 class="align_r lost_times">Times you lost: </h5>
+        <h5 class="align_r">Times you tied: </h5>
+      </div><!--
+      --><aside class="col-2-2">
+        <h3 class="align_l your_choice" id='user'></h3>
+        <h3 class="align_l comp_choice" id='comp'></h3>
+        <h5 class="align_l win_times"><label id="won"></label> <label id="per_won"></label></h5>
+        <h5 class="align_l lost_times"><label id="lost"></label> <label id="per_lost"></label></h5>
+        <h5 class="align_l"><label id="tied"><label> <label id="per_tied"></label></h5>
+        
+      </aside>
+      <h6 class="clearfix">Thank you for playing, have a great day</h6>
+      <button id="clear_btn">Clear Page</button>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" 
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+      crossorigin="anonymous">
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
