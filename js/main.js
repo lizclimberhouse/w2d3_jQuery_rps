@@ -34,10 +34,10 @@ $(document).ready( function() {
         case (compChoice < 0.33):
           compChoice = "rock"
           break
-        case (compChoice > 0.34) && (compChoice < 0.66):
+        case (compChoice > 0.33) && (compChoice < 0.66):
           compChoice = "paper"
           break
-        case (compChoice > 0.67):
+        case (compChoice > 0.66):
           compChoice = "scissors"
       }
     $('#user').text(userChoice)
